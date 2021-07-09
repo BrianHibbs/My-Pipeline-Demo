@@ -37,7 +37,7 @@ app.use('/', baseRouter);
 
 const { BAD_REQUEST, UNAUTHORIZED } = StatusCodes;
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  if(err instanceof NoUserFoundError) {
+  if (err instanceof NoUserFoundError) {
     log.error(err);
     res.status(BAD_REQUEST).json({
       error: err.message,
@@ -50,7 +50,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  if(err instanceof PasswordNotMatchesError) {
+  if (err instanceof PasswordNotMatchesError) {
     log.error(err);
     res.status(BAD_REQUEST).json({
       error: err.message,
@@ -63,7 +63,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  if(err instanceof AuthenticationError) {
+  if (err instanceof AuthenticationError) {
     log.error(err);
     res.status(UNAUTHORIZED).json({
       error: err.message,

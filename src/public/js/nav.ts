@@ -21,7 +21,7 @@ const navbarContent = `<a class="navbar-brand" href="/">GrubDash</a>
 body.innerHTML = navbar + body.innerHTML;
 
 const divFluid = document.getElementById('nav');
-if(divFluid) {
+if (divFluid) {
   divFluid.innerHTML = navbarContent + divFluid.innerHTML;
 } else {
   console.error('Something went wrong, could not attach Navbar content');
@@ -31,7 +31,7 @@ async function sendLogin() {
   const usernameInput = document.getElementById('usernameInput') as HTMLInputElement;
   const passwordInput = document.getElementById('passwordInput') as HTMLInputElement;
 
-  if(!usernameInput || !passwordInput) {
+  if (!usernameInput || !passwordInput) {
     console.log('Failed to send login request, due to missing inputs!');
     return;
   }

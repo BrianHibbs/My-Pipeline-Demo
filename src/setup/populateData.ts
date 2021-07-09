@@ -29,7 +29,7 @@ async function populateTable() {
 (async () => {
   try {
     await populateTable();
-  } catch(error) {
+  } catch (error) {
     console.log('Failed to populate table: ', error);
   }
 })();

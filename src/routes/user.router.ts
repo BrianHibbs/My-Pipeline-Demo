@@ -8,7 +8,7 @@ const userRouter = Router();
 userRouter.get('/', async (req, res) => {
   console.log('Reached our user router get all function');
 
-  if(!req.session.isLoggedIn || !req.session.user) {
+  if (!req.session.isLoggedIn || !req.session.user) {
     throw new AuthenticationError('You must be logged in to access this functionality');
   }
 

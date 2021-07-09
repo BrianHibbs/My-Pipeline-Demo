@@ -36,7 +36,7 @@ baseRouter.post('/login', async (req: express.Request<unknown, unknown, { userna
 });
 
 export async function logout(req: express.Request, res: express.Response): Promise<void> {
-  if(req.session.user) {
+  if (req.session.user) {
     const { username } = req.session.user;
 
     req.session.destroy(() => {

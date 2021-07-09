@@ -42,7 +42,7 @@ export class UserDAO {
 
     const data = await this.client.get(params).promise();
 
-    if(!data.Item) {
+    if (!data.Item) {
       // No User found with this id
       return null;
     }
@@ -67,7 +67,7 @@ export class UserDAO {
 
     const data = await this.client.query(params).promise();
 
-    if(!data.Items || data.Count === 0) {
+    if (!data.Items || data.Count === 0) {
       // No User found with this username
       return null;
     }
@@ -91,7 +91,7 @@ export class UserDAO {
       await this.client.put(params).promise();
 
       return true;
-    } catch(error) {
+    } catch (error) {
       console.log('Failed to add User: ', error);
       return false;
     }
@@ -114,7 +114,7 @@ export class UserDAO {
       await this.client.put(params).promise();
 
       return true;
-    } catch(error) {
+    } catch (error) {
       console.log('Failed to update User: ', error);
       return false;
     }
@@ -133,7 +133,7 @@ export class UserDAO {
       await this.client.delete(params).promise();
 
       return true;
-    } catch(error) {
+    } catch (error) {
       console.log('Failed to delete User: ', error);
       return false;
     }

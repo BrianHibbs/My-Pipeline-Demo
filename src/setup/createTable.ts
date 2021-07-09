@@ -67,7 +67,7 @@ const params: AWS.DynamoDB.CreateTableInput = {
     const response = await ddb.createTable(params).promise();
 
     console.log(response);
-  } catch(error) {
+  } catch (error) {
     console.log('Failed to create table: ', error);
   }
 })();

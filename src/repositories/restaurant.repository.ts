@@ -46,7 +46,7 @@ export class RestaurantDAO {
 
     const data = await this.client.get(params).promise();
 
-    if(!data.Item) {
+    if (!data.Item) {
       // No Restaraunt found with this id
       return null;
     }
@@ -70,7 +70,7 @@ export class RestaurantDAO {
       await this.client.put(params).promise();
 
       return true;
-    } catch(error) {
+    } catch (error) {
       console.log('Failed to add Restaurant: ', error);
       return false;
     }
@@ -93,7 +93,7 @@ export class RestaurantDAO {
       await this.client.put(params).promise();
 
       return true;
-    } catch(error) {
+    } catch (error) {
       console.log('Failed to update Restaurant: ', error);
       return false;
     }
@@ -112,7 +112,7 @@ export class RestaurantDAO {
       await this.client.delete(params).promise();
 
       return true;
-    } catch(error) {
+    } catch (error) {
       console.log('Failed to delete Restaurant: ', error);
       return false;
     }

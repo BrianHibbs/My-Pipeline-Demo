@@ -14,7 +14,7 @@ const TableName = 'Grubdash';
     const response = await ddb.deleteTable({ TableName }).promise();
 
     console.log(response);
-  } catch(error) {
+  } catch (error) {
     console.log('Failed to delete table: ', error);
   }
 })();

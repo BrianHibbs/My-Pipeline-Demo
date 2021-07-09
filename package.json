@@ -1,5 +1,4 @@
 {
-  "type":"module",
   "name": "grubdash",
   "version": "1.0.0",
   "description": "A DoorDash/GrubHub Clone",

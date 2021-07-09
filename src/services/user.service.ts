@@ -49,11 +49,11 @@ export class UserService {
   async login(username: string, password: string): Promise<User> {
     const user = await this.dao.getByUsername(username);
 
-    if(!user) {
+    if (!user) {
       throw new NoUserMatchesUsernameError();
     }
 
-    if(user.password !== password) {
+    if (user.password !== password) {
       throw new PasswordNotMatchesError();
     }
 
